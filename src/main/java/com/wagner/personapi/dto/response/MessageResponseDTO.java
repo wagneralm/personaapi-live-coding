@@ -1,4 +1,4 @@
-package com.wagner.personapi.dto;
+package com.wagner.personapi.dto.response;
 
 import lombok.Builder;
 import lombok.Data;
