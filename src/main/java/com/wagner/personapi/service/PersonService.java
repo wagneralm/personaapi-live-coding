@@ -6,7 +6,6 @@ import com.wagner.personapi.entity.Person;
 import com.wagner.personapi.exception.PersonNotFoundException;
 import com.wagner.personapi.mapper.PersonMapper;
 import com.wagner.personapi.repository.PersonRepository;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

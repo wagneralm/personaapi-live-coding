@@ -5,7 +5,6 @@ import com.wagner.personapi.dto.response.MessageResponseDTO;
 import com.wagner.personapi.exception.PersonNotFoundException;
 import com.wagner.personapi.repository.PersonRepository;
 import com.wagner.personapi.service.PersonService;
-import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +20,7 @@ public class PersonController {
 
     private PersonService personService;
 
-    @Autowired 
+    @Autowired
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
