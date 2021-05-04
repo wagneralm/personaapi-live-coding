@@ -15,17 +15,16 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/v1/people")
-@AllArgsConstructor(onConstructor = @__(@AllArgsConstructor))// cria todos os construtores
 public class PersonController {
 
     private PersonRepository personRepository;
 
     private PersonService personService;
 
-//    @Autowired -> @AllArgsConstructor(onConstructor = @__(@AllArgsConstructor))
-//    public PersonController(PersonService personService) {
-//        this.personService = personService;
-//    }
+    @Autowired 
+    public PersonController(PersonService personService) {
+        this.personService = personService;
+    }
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)

@@ -14,17 +14,16 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-@AllArgsConstructor(onConstructor = @__(@AllArgsConstructor))// cria todos os construtores
 public class PersonService {
 
     private PersonRepository personRepository;
 
     private final PersonMapper personMapper = PersonMapper.INSTANCE;
 
-//    @Autowired -> @AllArgsConstructor(onConstructor = @__(@AllArgsConstructor))
-//    public PersonService(PersonRepository personRepository) {
-//        this.personRepository = personRepository;
-//    }
+    @Autowired
+    public PersonService(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
 
     public MessageResponseDTO createPerson(PersonDTO personDTO) {
         Person personToSave = personMapper.toModel(personDTO);
